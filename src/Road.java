@@ -63,6 +63,7 @@ public class Road extends JPanel implements ActionListener, Runnable {
     public void actionPerformed(ActionEvent e){
         p.move();
         repaint();
+        System.out.println(p.v);
     }
 
     @Override
