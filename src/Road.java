@@ -9,7 +9,7 @@ import java.util.List;
 import java.util.Iterator;
 import java.util.Random;
 
-import static java.awt.font.TextAttribute.FONT;
+
 
 public class Road extends JPanel implements ActionListener, Runnable {
 
@@ -27,6 +27,7 @@ public class Road extends JPanel implements ActionListener, Runnable {
         enemiesFactory.start();
         addKeyListener(new myKeyAdapter());
         setFocusable(true);
+
 
     }
 
