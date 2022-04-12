@@ -8,6 +8,10 @@ public class Enemy {
     Image img = new ImageIcon("res/Enemy.png").getImage();
     Road road;
 
+    public Rectangle getRect(){
+        return new Rectangle(x,y,160,100);
+    }
+
     public Enemy(int x, int y, int v, Road road){
         this.x = x;
         this.y = y;

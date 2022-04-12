@@ -8,7 +8,16 @@ public class Player {
     public static final int MAX_TOP = 100;
     public static final int MAX_BOTTOM = 650;
 
-    Image img = new ImageIcon("res/car.png").getImage();
+
+    Image img_l = new ImageIcon("res/car_left.png").getImage();
+    Image img_r = new ImageIcon("res/car_right.png").getImage();
+    Image img_c = new ImageIcon("res/car.png").getImage();
+
+    Image img = img_c;
+
+    public Rectangle getRect(){
+        return new Rectangle(x,y,170,60);
+    }
 
     int v = 0; // Скорость
     int dv = 0; // Ускорение
@@ -53,9 +62,11 @@ public class Player {
         }
         if (key == KeyEvent.VK_UP) {
             dy = 10;
+            img = img_l;
         }
         if (key == KeyEvent.VK_DOWN) {
             dy = -10;
+            img = img_r;
         }
 
 
@@ -68,6 +79,7 @@ public class Player {
         }
         if (key == KeyEvent.VK_DOWN || key == KeyEvent.VK_UP) {
             dy = 0;
+            img = img_c;
         }
 
 
